@@ -1,5 +1,4 @@
 const args = process.argv.slice(2);
-console.log(args);
 
 let name = "user";
 let level = 1;
