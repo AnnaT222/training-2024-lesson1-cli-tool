@@ -4,6 +4,7 @@ console.log(args);
 let name = "user";
 let level = 1;
 let greeting = "Hello";
+let language = "English";
 
 for (let i = 0; i <= args.length; i++) {
   switch (args[i]) {
@@ -22,6 +23,11 @@ for (let i = 0; i <= args.length; i++) {
       greeting = args[i + 1];
       i++;
       break;
+    case "--language":
+    case "-ln":
+      language = args[i + 1];
+      i++;
+      break;
     default:
       break;
   }
@@ -31,7 +37,7 @@ let dateTime = new Date();
 if (level === 1) {
   console.log(`${name} ${greeting}`);
 } else if (level === 2) {
-  console.log(`${name} ${greeting} (Date and Time: ${dateTime})`);
+  console.log(`${name} ${greeting} (Date and Time: ${dateTime}) ${language}`);
 } else {
-    console.log(`${name} ${greeting}`);
+  console.log(`${name} ${greeting} ${language}`);
 }
